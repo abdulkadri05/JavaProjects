@@ -1,18 +1,18 @@
-## Getting Started
+Snake Game
+Description
+The Snake Game is a classic arcade game where the player maneuvers a growing snake to eat food, avoid obstacles, and prevent collisions with itself. This implementation of the Snake Game is written in Java and provides a simple yet engaging gameplay experience.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Features
+Smooth Controls: Use the arrow keys to navigate the snake in four directions.
+Scoring System: Earn points by eating food, with each piece of food increasing the snake's length.
+Collision Detection: The game ends if the snake collides with the walls or its own body.
+Simple Graphics: A clean and minimalistic graphical interface.
+How to Play
+Start the Game: Launch the game to begin.
+Control the Snake:
+Use the Up Arrow to move up.
+Use the Down Arrow to move down.
+Use the Left Arrow to move left.
+Use the Right Arrow to move right.
+Eat Food: Guide the snake to the food that appears randomly on the screen. Each time the snake eats food, it grows longer, and the score increases.
+Avoid Collisions: The game ends if the snake runs into the walls or its own body.

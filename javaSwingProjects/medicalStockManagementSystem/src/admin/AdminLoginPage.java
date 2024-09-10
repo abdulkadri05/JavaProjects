@@ -1,15 +1,14 @@
-package MainUserPage;  // Ensure this matches your actual package
+package admin;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javaSwing.SwingDataDisplay;  // Import the class from the correct package
 
 public class AdminLoginPage {
 
-    private static final String ADMIN_USERNAME = "admin";  // Replace with actual username
-    private static final String ADMIN_PASSWORD = "password";  // Replace with actual password
+    private static final String ADMIN_USERNAME = "1";  // Replace with actual username
+    private static final String ADMIN_PASSWORD = "1";  // Replace with actual password
 
     private JFrame frame;
     private JPanel cardPanel;
@@ -22,8 +21,7 @@ public class AdminLoginPage {
         cardPanel = new JPanel(new CardLayout());
         frame.add(cardPanel);
 
-        createLoginPanel();
-        createDataPanel();
+        createLoginPanel();  // Create the login panel
 
         frame.setVisible(true);
     }
@@ -51,9 +49,14 @@ public class AdminLoginPage {
                 String password = new String(passwordField.getPassword());
 
                 if (ADMIN_USERNAME.equals(username) && ADMIN_PASSWORD.equals(password)) {
-                    // Switch to the data panel
-                    CardLayout cl = (CardLayout) (cardPanel.getLayout());
-                    cl.show(cardPanel, "DataPanel");
+                    // Close the login frame
+                    frame.dispose();
+
+                    // Create and display the home page
+                    SwingUtilities.invokeLater(() -> {
+                        AdminHomePage homePage = new AdminHomePage();
+                        homePage.getFrame().setVisible(true);
+                    });
                 } else {
                     JOptionPane.showMessageDialog(frame, "Invalid username or password", "Error", JOptionPane.ERROR_MESSAGE);
                 }
@@ -61,12 +64,5 @@ public class AdminLoginPage {
         });
 
         cardPanel.add(loginPanel, "LoginPanel");
-    }
-
-    private void createDataPanel() {
-        SwingDataDisplay dataDisplay = new SwingDataDisplay();
-        JPanel dataPanel = dataDisplay.createPatientDataPanel();  // Use the updated method
-
-        cardPanel.add(dataPanel, "DataPanel");
     }
 }

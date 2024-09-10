@@ -1,5 +1,4 @@
-import MainUserPage.AdminLoginPage;
-import javaSwing.SwingDataDisplay;
+import admin.AdminLoginPage;
 
 public class Main {
     public static void main(String[] args) {

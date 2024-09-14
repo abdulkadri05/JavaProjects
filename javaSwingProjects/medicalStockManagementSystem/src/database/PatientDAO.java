@@ -10,7 +10,7 @@ public class PatientDAO {
     private Connection getConnection() throws SQLException {
         String url = "jdbc:mysql://localhost/hospital";
         String user = "root";
-        String password = "Ryzenpro5$$"; // Update with your actual password
+        String password = ""; // Update with your actual password
         return DriverManager.getConnection(url, user, password);
     }
 
